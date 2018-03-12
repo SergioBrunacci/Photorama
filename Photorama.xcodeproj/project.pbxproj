@@ -12,6 +12,7 @@
 		F5C3D6B5205741D300515BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C3D6B4205741D300515BA5 /* Assets.xcassets */; };
 		F5C3D6B8205741D300515BA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3D6B6205741D300515BA5 /* LaunchScreen.storyboard */; };
 		F5C3D6C02057430A00515BA5 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6BF2057430A00515BA5 /* PhotosViewController.swift */; };
+		F5C3D6C22057481700515BA5 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6C12057481700515BA5 /* FlickrAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F5C3D6B7205741D300515BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5C3D6B9205741D300515BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C3D6BF2057430A00515BA5 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		F5C3D6C12057481700515BA5 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F5C3D6B6205741D300515BA5 /* LaunchScreen.storyboard */,
 				F5C3D6B9205741D300515BA5 /* Info.plist */,
 				F5C3D6BF2057430A00515BA5 /* PhotosViewController.swift */,
+				F5C3D6C12057481700515BA5 /* FlickrAPI.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C3D6C22057481700515BA5 /* FlickrAPI.swift in Sources */,
 				F5C3D6C02057430A00515BA5 /* PhotosViewController.swift in Sources */,
 				F5C3D6AE205741D300515BA5 /* AppDelegate.swift in Sources */,
 			);
