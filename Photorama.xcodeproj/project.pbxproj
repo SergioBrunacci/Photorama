@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F5C3D6AE205741D300515BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6AD205741D300515BA5 /* AppDelegate.swift */; };
-		F5C3D6B0205741D300515BA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6AF205741D300515BA5 /* ViewController.swift */; };
 		F5C3D6B3205741D300515BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3D6B1205741D300515BA5 /* Main.storyboard */; };
 		F5C3D6B5205741D300515BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C3D6B4205741D300515BA5 /* Assets.xcassets */; };
 		F5C3D6B8205741D300515BA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C3D6B6205741D300515BA5 /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		F5C3D6AA205741D300515BA5 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C3D6AD205741D300515BA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5C3D6AF205741D300515BA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5C3D6B2205741D300515BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5C3D6B4205741D300515BA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5C3D6B7205741D300515BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				F5C3D6AD205741D300515BA5 /* AppDelegate.swift */,
-				F5C3D6AF205741D300515BA5 /* ViewController.swift */,
 				F5C3D6B1205741D300515BA5 /* Main.storyboard */,
 				F5C3D6B4205741D300515BA5 /* Assets.xcassets */,
 				F5C3D6B6205741D300515BA5 /* LaunchScreen.storyboard */,
@@ -140,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C3D6C02057430A00515BA5 /* PhotosViewController.swift in Sources */,
-				F5C3D6B0205741D300515BA5 /* ViewController.swift in Sources */,
 				F5C3D6AE205741D300515BA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
