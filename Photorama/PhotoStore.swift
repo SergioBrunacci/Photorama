@@ -13,6 +13,16 @@ enum PhotoResult {
     case failure(Error)
 }
 
+enum FlickrError: Error {
+    case invalidJSONData
+}
+
+/*
+enum Method: String {
+    case landscapePhotos = "flickr.landscape.getList"
+}
+ */
+
 class PhotoStore {
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
@@ -42,4 +52,17 @@ class PhotoStore {
         }
         task.resume()
     }
+    
+    static func photos(fromJSON data: Data) -> PhotoResult {
+        do {
+            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            var finalPhotos = [Photo]()
+            return .sucess(finalPhotos)
+        } catch let error {
+            return .failure(error)
+        }
+    }
+    
+    
 }
