@@ -14,7 +14,7 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
-    func fetchInterestingPhotos(){
+    func fetchLandscapePhotos(){
         let url = FlickrAPI.landscapePhotosURL
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request){
