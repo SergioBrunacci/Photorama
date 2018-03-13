@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum PhotoResult {
+    case sucess([Photo])
+    case failure(Error)
+}
+
 class PhotoStore {
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
