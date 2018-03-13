@@ -14,6 +14,7 @@
 		F5C3D6C02057430A00515BA5 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6BF2057430A00515BA5 /* PhotosViewController.swift */; };
 		F5C3D6C22057481700515BA5 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6C12057481700515BA5 /* FlickrAPI.swift */; };
 		F5C3D6C420574F4B00515BA5 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6C320574F4B00515BA5 /* PhotoStore.swift */; };
+		F5C3D6C62057565400515BA5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C3D6C52057565400515BA5 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F5C3D6BF2057430A00515BA5 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F5C3D6C12057481700515BA5 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		F5C3D6C320574F4B00515BA5 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
+		F5C3D6C52057565400515BA5 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				F5C3D6AD205741D300515BA5 /* AppDelegate.swift */,
 				F5C3D6C12057481700515BA5 /* FlickrAPI.swift */,
 				F5C3D6C320574F4B00515BA5 /* PhotoStore.swift */,
+				F5C3D6C52057565400515BA5 /* Photo.swift */,
 				F5C3D6BF2057430A00515BA5 /* PhotosViewController.swift */,
 				F5C3D6B1205741D300515BA5 /* Main.storyboard */,
 				F5C3D6B4205741D300515BA5 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				F5C3D6C02057430A00515BA5 /* PhotosViewController.swift in Sources */,
 				F5C3D6C420574F4B00515BA5 /* PhotoStore.swift in Sources */,
 				F5C3D6AE205741D300515BA5 /* AppDelegate.swift in Sources */,
+				F5C3D6C62057565400515BA5 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
