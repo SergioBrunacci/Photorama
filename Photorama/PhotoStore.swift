@@ -1,68 +1,77 @@
-//
-//  PhotoStore.swift
-//  Photorama
-//
-//  Created by Sergio de Almeida Brunacci on 2018-03-12.
-//  Copyright © 2018 Centennial College. All rights reserved.
-//
-
 import Foundation
+import UIKit
 
-enum PhotoResult {
-    case sucess([Photo])
+enum ImageResult {
+    case success(UIImage)
     case failure(Error)
 }
 
-enum FlickrError: Error {
-    case invalidJSONData
+enum PhotoError: Error {
+    case iamgeCreationError
 }
 
-/*
-enum Method: String {
-    case landscapePhotos = "flickr.landscape.getList"
+enum PhotosResult {
+    case success([Photo])
+    case failure(Error)
 }
- */
 
 class PhotoStore {
-    private let session: URLSession = {
+    private let session: URLSession = { () -> URLSession in
         let config = URLSessionConfiguration.default
         return URLSession(configuration: config)
     }()
     
-    func fetchLandscapePhotos(){
-        let url = FlickrAPI.landscapePhotosURL
+    func fetchInterestingPhotos(completion: @escaping (PhotosResult) -> Void) {
+        let url = FlickrAPI.interestingPhotosURL
         let request = URLRequest(url: url)
-        let task = session.dataTask(with: request){
+        let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
             
-            if let jsonData = data {
-                
-                do {
-                    let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
-                    print(jsonObject)
-                } catch let error {
-                    print("Error creating JSON object: \(error)")
-                }
-            } else if let requestError = error{
-                print("Error fetching landscape photos: \(requestError)")
-            } else {
-                print("Unexpected error with the request")
+            let result = self.processPhotosRequest(data: data, error: error)
+            OperationQueue.main.addOperation {
+                completion(result)
             }
-            
         }
         task.resume()
     }
     
-    static func photos(fromJSON data: Data) -> PhotoResult {
-        do {
-            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-            
-            var finalPhotos = [Photo]()
-            return .sucess(finalPhotos)
-        } catch let error {
-            return .failure(error)
+    private func processPhotosRequest(data: Data?, error: Error?) -> PhotosResult {
+        guard let jsonData = data else {
+            return .failure(error!)
         }
+        
+        return FlickrAPI.photos(fromJSON: jsonData)
     }
     
+    func fetchImage(for photo: Photo, completion: @escaping (ImageResult) -> Void) {
+        let photoURL = photo.remoteURL
+        let request = URLRequest(url: photoURL)
+        
+        let task = session.dataTask(with: request) {
+            (data, response, error) -> Void in
+            
+            let result = self.processImageRequest(data: data, error: error)
+            OperationQueue.main.addOperation {
+                completion(result)
+            }
+        }
+        task.resume()
+        
+    }
     
+    private func processImageRequest(data: Data?, error: Error?) -> ImageResult {
+        guard
+            let imageData = data,
+            let image = UIImage(data: imageData) else {
+                
+                // Couldnt create an image
+                if data == nil {
+                    return .failure(error!)
+                } else {
+                    return .failure(PhotoError.iamgeCreationError)
+                }
+        }
+        
+        return .success(image)
+    }
 }
